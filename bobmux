@@ -2,7 +2,6 @@
 #
 # 
 
-
 #!/bin/bash
 
 until [ $# -eq 2 ]; do
