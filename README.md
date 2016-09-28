@@ -4,8 +4,8 @@
 
 ##bobmux.sh
 
-A small script that launches a 4 windowed tmux session under what ever session name you specify.
-In these four windows 
+A small script that launches a **4 windowed tmux sessio**n under what ever session name you specify.
+In these four windows **four system and networking tools** are running. These tools give you a good oversight to your linux box. 
 
 **Installation:**
 
