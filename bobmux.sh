@@ -5,7 +5,7 @@
 #!/bin/bash
 
 until [ $# -eq 2 ]; do
-   echo "Usage : ./bobmux start sessionName"
+   echo "Usage : ./bobmux.sh start sessionName"
      exit
 done
 
@@ -63,7 +63,7 @@ case $1 in
         ;;
         *)
         clear
-        echo "Usage: ./bobmux start|stop SessionName !"
+        echo "Usage: ./bobmux.sh start|stop SessionName !"
         exit
         ;;
 esac
