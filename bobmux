@@ -1,8 +1,8 @@
-#
 # Author: LukeBob
 #
-# Made for dawwid
-#
+# 
+
+
 #!/bin/bash
 
 until [ $# -eq 2 ]; do
