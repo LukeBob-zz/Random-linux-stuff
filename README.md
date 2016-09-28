@@ -25,11 +25,11 @@ Install the latest version of **speedometer**
  
 ##torBlocker.sh
 
-Another small script that will obtain all tor exit node ip addresse's and block them with your linux firewall using iptables.
+Another small script that will** obtain all tor exit node ip addresses** and **block them with your linux firewall using iptables**.
 
 **Warning**
 
-can only be run once every half hour, not that you need to run it that often.
+can only be **run once** every **half hour**, **not** that you need to run it that often.
 
 **Code Example**
 
