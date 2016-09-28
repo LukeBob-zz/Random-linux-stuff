@@ -34,8 +34,15 @@ can only be **run once** every **half hour** as the list is pretty big, **not** 
 **Code Example**
 
  * ```./torBlocker.sh```
- 
+
+##Contributors
+
+**Luke/Bob**
+
+
 ##License
+
+**Copyright (c) 2016 LukeBob (MIT)**
 
 
  
