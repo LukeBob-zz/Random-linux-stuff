@@ -1,11 +1,13 @@
 # Random-linux-stuff
-linux scripts
+**linux scripts**
 
 
 ## bobmux
 
-**instilation**
+ **instilation:**
 
-Simple extract the script to any dir, Chmod and chown it like so.
+Simple extract the script to any dir, **Chmod** and **chown** it like so.
 
- * ```
+ * ```chmod +x bobmux && chown root:root bobmux```
+ 
+ 
