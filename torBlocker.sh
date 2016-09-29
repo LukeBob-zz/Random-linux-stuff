@@ -1,8 +1,9 @@
-# # # # # # # # # # # #         
-# Author: Unknown     #
-#                     #
-# Modified by LukeBob #
-# # # # # # # # # # # #
+# # # # # # # # # # # # #         
+#Authors: Blake Self &  #
+#         Shawn Burrel  #
+#                       #
+# Modified by LukeBob   #
+# # # # # # # # # # # # #
 
 #!/bin/bash
 
