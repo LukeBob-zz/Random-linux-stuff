@@ -17,7 +17,7 @@ for i in {1..10};
  do
   IPLIST=$(cat iptest.txt | sed -n ${numb}p)
   REQ_LIST=$( cat ${LOG_DIR} | awk '{print $1}' | sort | uniq -c | sort -n | tail | sed 's/\s\+/ /' | cut -f 1-2 -d ' ' | sed -n ${numb}p)
-  ADDRESS=$(echo $(whois ${IPLIST} | grep -m3 -e Address: -e Country: | cut -f 2-3 -d ':'))
+  ADDRESS=$(echo $(whois ${IPLIST} | grep -m3 -e Address: -e Country: -e country | cut -f 2-3 -d ':'))
   ISP=$(whois ${IPLIST} | grep netname | cut -f 2 -d ':' | sed 's/\s\+/ /')
      if [[ $IPLIST =~ $(echo ^\($(paste -sd'|' /tmp/full.tor)\)$) ]]; then  
     echo
