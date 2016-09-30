@@ -35,6 +35,13 @@ can only be **run once** every **half hour** as the list is pretty big, **not** 
 
  * ```./torBlocker.sh```
 
+##apachelist.sh
+
+Looks at your **apache log files** and gives you a **nice interface** to view the logs.
+
+**Code Example**
+
+
 
 ##Contributors
 
