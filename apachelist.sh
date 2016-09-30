@@ -5,7 +5,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #!/bin/bash
 
-LOG_DIR=/var/log/apache*/All/access-all.log 
+LOG_DIR=/var/log/apache*/*access.log ## your apache log dir
 
 numb=1
 
