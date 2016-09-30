@@ -1,13 +1,17 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Author: LukeBob                                                                               #
-#     Copyright (c) 2016 LukeBob (MIT)                                                                                           #
+#     Copyright (c) 2016 LukeBob (MIT)                                                          #
 # Shows the top ten ip-addresses sending requests to apache1/2 and their data and location.     #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #!/bin/bash
 
-LOG_DIR=/var/log/apache*/*access.log ## your apache log dir
+set -e
+
+LOG_DIR=/var/log/apache*/All/access*.log  # Any log file
 
 numb=1
+
+IP_WHITELIST=
 
 IP_LIST=$(cat ${LOG_DIR} | awk '{print $1}' | sort | uniq -c | sort -n | tail | sed 's/\s\+/ /' | cut -f 3-4 -d ' ' > iptest.txt)
 
@@ -17,17 +21,16 @@ for i in {1..10};
  do
   IPLIST=$(cat iptest.txt | sed -n ${numb}p)
   REQ_LIST=$( cat ${LOG_DIR} | awk '{print $1}' | sort | uniq -c | sort -n | tail | sed 's/\s\+/ /' | cut -f 1-2 -d ' ' | sed -n ${numb}p)
-  ADDRESS=$(echo $(whois ${IPLIST} | grep -m3 -e Address: -e Country: -e country | cut -f 2-3 -d ':'))
+  ADDRESS=$(echo $(whois ${IPLIST} | grep -m3 -e City: -e Country: -e country | cut -f 2-3 -d ':'))
   ISP=$(whois ${IPLIST} | grep netname | cut -f 2 -d ':' | sed 's/\s\+/ /')
-     if [[ $IPLIST =~ $(echo ^\($(paste -sd'|' /tmp/full.tor)\)$) ]]; then  
-    echo
-    echo -en "${numb})" "$(tput bold)$(tput setaf 2)\tIP: $(tput sgr0)$(tput setaf 3)$IPLIST$(tput sgr0) \t"    "$(tput bold)$(tput setaf 2)REQUESTS-MADE:$(tput sgr0)$REQ_LIST \t"    "$(tput bold)$(tput setaf 4)TOR:$(tput setaf 2)TRUE$(tput sgr0) \t" "$(tput bold)$(tput setaf 2)LOCATION$(tput sgr0)|$(tput setaf 4)ISP: $(tput sgr0)$(tput setaf 2)$ADDRESS$(tput sgr0)|$(tput setaf 4)$ISP$(tput sgr0) "
-    echo
-    else
-    echo
-    echo -en "${numb})" "$(tput bold)$(tput setaf 2)\tIP: $(tput sgr0)$(tput setaf 3)$IPLIST$(tput sgr0) \t"    "$(tput bold)$(tput setaf 2)REQUESTS-MADE:$(tput sgr0)$(tput setaf 3)$REQ_LIST \t"    "$(tput bold)$(tput setaf 4)TOR:$(tput setaf 1)FALSE$(tput sgr0) \t" "$(tput bold)$(tput setaf 2)LOCATION$(tput sgr0)|$(tput setaf 4)ISP: $(tput sgr0)$(tput setaf 2)$ADDRESS$(tput sgr0)|$(tput setaf 4)$ISP$(tput sgr0) "
-    echo
- fi
+     if grep -G $IPLIST /tmp/full.tor >> /dev/null   
+      then  
+       echo -en "${numb})" "$(tput bold)$(tput setaf 2)\tIP: $(tput sgr0)$(tput setaf 3)$IPLIST$(tput sgr0) \t"    "$(tput bold)$(tput setaf 2)REQUESTS-MADE:$(tput sgr0)$(tput setaf 3)$REQ_LIST \t"    "$(tput bold)$(tput setaf 4)TOR:$(tput setaf 2)TRUE$(tput sgr0) \t" "$(tput bold)$(tput setaf 2)LOCATION$(tput sgr0)|$(tput setaf 4)ISP: $(tput sgr0)$(tput setaf 2)$ADDRESS$(tput sgr0) |$(tput setaf 4)$ISP$(tput sgr0) "
+       echo
+     else
+       echo -en "${numb})" "$(tput bold)$(tput setaf 2)\tIP: $(tput sgr0)$(tput setaf 3)$IPLIST$(tput sgr0) \t"    "$(tput bold)$(tput setaf 2)REQUESTS-MADE:$(tput sgr0)$(tput setaf 3)$REQ_LIST \t"    "$(tput bold)$(tput setaf 4)TOR:$(tput setaf 1)FALSE$(tput sgr0) \t" "$(tput bold)$(tput setaf 2)LOCATION$(tput sgr0)|$(tput setaf 4)ISP: $(tput sgr0)$(tput setaf 2)$ADDRESS$(tput sgr0)|$(tput setaf 4)$ISP$(tput sgr0) "
+       echo
+    fi
   let numb=numb+1
 done
 }
