@@ -1,8 +1,9 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Author: LukeBob                                                                               #
+#                                                                                               #
+# Shows the top ten ip-addresses sending requests to apache1/2 and their data and location.     #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #!/bin/bash
-#
-# Author: LukeBob
-#
-# Shows the top ten ip-addresses sending requests to apache1/2 and their data and location.
 
 LOG_DIR=/var/log/apache*/All/access-all.log 
 
