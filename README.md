@@ -25,7 +25,9 @@ Install the latest version of **speedometer**
  
 ##torBlocker.sh
 
-Another small script that will **obtain all TOR exit node ip addresses** and **block them with your linux firewall using iptables**.
+Another small script that will **obtain all TOR exit node ip addresses** and **block them with your linux firewall using iptables**. You will need to download **full.tor** and put it in the **/temp** dir like so, to use this script.
+
+ * ```wget -q -O - https://www.dan.me.uk/torlist/ -U SXTorBlocker/1.0 > /tmp/full.tor```
 
 **Warning**
 
@@ -37,7 +39,9 @@ can only be **run once** every **half hour** as the list is pretty big, **not** 
 
 ##apachelist.sh
 
-Looks at your **apache log files** and gives you a **nice interface** to view the logs.
+Looks at your **apache log files** and gives you a **nice interface** to view the logs. You will need to download **full.tor** and put it in the **/temp dir** like so, to use this script.
+
+ * ```wget -q -O - https://www.dan.me.uk/torlist/ -U SXTorBlocker/1.0 > /tmp/full.tor```
 
 **Code Example**
 
