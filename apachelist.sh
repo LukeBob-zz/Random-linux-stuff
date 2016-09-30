@@ -1,6 +1,6 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Author: LukeBob                                                                               #
-#                                                                                               #
+#     Copyright (c) 2016 LukeBob (MIT)                                                                                           #
 # Shows the top ten ip-addresses sending requests to apache1/2 and their data and location.     #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #!/bin/bash
