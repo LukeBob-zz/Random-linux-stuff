@@ -46,23 +46,23 @@ Looks at your **apache log files** and gives you a **nice interface** to view th
 
 1)      IP: 192.xxx.xxx.xxx       REQUESTS-MADE: 915      TOR:FALSE       LOCATION|ISP: xxxxxxxx xxxx xx|xxx
 
-2)      IP: 141.xxx.xx.xx       REQUESTS-MADE: 1098     TOR:FALSE       LOCATION|ISP: xxx xx xxxx xx| xxxxxx
+2)      IP: 141.xxx.xx.xx         REQUESTS-MADE: 1098     TOR:FALSE       LOCATION|ISP: xxx xx xxxx xx| xxxxxx
 
-3)      IP: 91.xxx.xx.xxx       REQUESTS-MADE: 2328     TOR:FALSE       LOCATION|ISP: | xxx
+3)      IP: 91.xxx.xx.xxx         REQUESTS-MADE: 2328     TOR:FALSE       LOCATION|ISP: | xxx
 
 4)      IP: 109.xxx.xxx.xx        REQUESTS-MADE: 7605     TOR:FALSE       LOCATION|ISP: | xxxxx
 
-5)      IP: 86.xxx.xxx.xxx       REQUESTS-MADE: 7624     TOR:FALSE       LOCATION|ISP: | xxxxxxxxxx
+5)      IP: 86.xxx.xxx.xxx        REQUESTS-MADE: 7624     TOR:FALSE       LOCATION|ISP: | xxxxxxxxxx
 
-6)      IP: 86.xxx.xx.xxx        REQUESTS-MADE: 15294    TOR:FALSE       LOCATION|ISP: | xxxxxxxxxxxxx
+6)      IP: 86.xxx.xx.xxx         REQUESTS-MADE: 15294    TOR:FALSE       LOCATION|ISP: | xxxxxxxxxxxxx
 
-7)      IP: 86.xxx.xx.xxx        REQUESTS-MADE: 20194    TOR:FALSE       LOCATION|ISP: |  xxxxxxx xxx
+7)      IP: 86.xxx.xx.xxx         REQUESTS-MADE: 20194    TOR:FALSE       LOCATION|ISP: |  xxxxxxx xxx
 
-8)      IP: 109.xxx.xx.xxx       REQUESTS-MADE: 28197    TOR:FALSE       LOCATION|ISP: |  xxxxxxx xxx
+8)      IP: 109.xxx.xx.xxx        REQUESTS-MADE: 28197    TOR:FALSE       LOCATION|ISP: |  xxxxxxx xxx
 
-9)      IP: 82.xx.xx.xx          REQUESTS-MADE: 71989    TOR:FALSE       LOCATION|ISP: | xxxxx
+9)      IP: 82.xx.xx.xx           REQUESTS-MADE: 71989    TOR:FALSE       LOCATION|ISP: | xxxxx
 
-10)     IP: 109.xxx.xx.xx        REQUESTS-MADE: 199824   TOR:FALSE       LOCATION|ISP: | xxxxx xx xxx
+10)     IP: 109.xxx.xx.xx         REQUESTS-MADE: 199824   TOR:FALSE       LOCATION|ISP: | xxxxx xx xxx
 
 IP TRAFFIC TO LOOK INTO ?
 
