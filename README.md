@@ -48,11 +48,11 @@ Looks at your **apache log files** and gives you a **nice interface** to view th
 ```erb
 : ./apachelist.sh
 
-1)      IP: 192.xxx.xxx.xxx       REQUESTS-MADE: 915      TOR:FALSE       LOCATION|ISP: xxxxxxxx xxxx US|xxx
+1)      IP: 192.xxx.xxx.xxx       REQUESTS-MADE: 915      TOR:FALSE       LOCATION|ISP: xxxxxxxx xxxx US| xxx
 
-2)      IP: 141.xxx.xx.xx         REQUESTS-MADE: 1098     TOR:FALSE       LOCATION|ISP: xxx xx xxxx RU| xxxxxx
+2)      IP: 141.xxx.xx.xx         REQUESTS-MADE: 1098     TOR:FALSE       LOCATION|ISP: xxx xx xxxx RU | xxxxxx
 
-3)      IP: 91.xxx.xx.xxx         REQUESTS-MADE: 2328     TOR:FALSE       LOCATION|ISP: xxxx FR | xxx
+3)      IP: 91.xxx.xx.xxx         REQUESTS-MADE: 2328     TOR:FALSE       LOCATION|ISP: xxxx FR | FR-OVH
 
 4)      IP: 109.xxx.xxx.xx        REQUESTS-MADE: 7605     TOR:FALSE       LOCATION|ISP: GB | xxxxx
 
@@ -64,7 +64,7 @@ Looks at your **apache log files** and gives you a **nice interface** to view th
 
 8)      IP: 109.xxx.xx.xxx        REQUESTS-MADE: 28197    TOR:FALSE       LOCATION|ISP: xxx US |  xxxxxxx xxx
 
-9)      IP: 82.xx.xx.xx           REQUESTS-MADE: 71989    TOR:FALSE       LOCATION|ISP: xxxxxxx xxx GB | xxxxx
+9)      IP: 82.xx.xx.xx           REQUESTS-MADE: 71989    TOR:FALSE       LOCATION|ISP: xxxxxxx xxx GB | BT-CENTRAL-PLUS
 
 10)     IP: 109.xxx.xx.xx         REQUESTS-MADE: 199824   TOR:FALSE       LOCATION|ISP: xxxxxx CA | xxxxx xx xxx
 
