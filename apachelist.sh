@@ -7,7 +7,7 @@
 
 set -e
 
-LOG_DIR=/var/log/apache*/All/access*.log  # Any log file
+LOG_DIR=/var/log/apache*/All/access*.log  # apache log file
 
 numb=1
 
@@ -25,7 +25,7 @@ for i in {1..10};
   ISP=$(whois ${IPLIST} | grep netname | cut -f 2 -d ':' | sed 's/\s\+/ /')
      if grep -G $IPLIST /tmp/full.tor >> /dev/null   
       then  
-       echo -en "${numb})" "$(tput bold)$(tput setaf 2)\tIP: $(tput sgr0)$(tput setaf 3)$IPLIST$(tput sgr0) \t"    "$(tput bold)$(tput setaf 2)REQUESTS-MADE:$(tput sgr0)$(tput setaf 3)$REQ_LIST \t"    "$(tput bold)$(tput setaf 4)TOR:$(tput setaf 2)TRUE$(tput sgr0) \t" "$(tput bold)$(tput setaf 2)LOCATION$(tput sgr0)|$(tput setaf 4)ISP: $(tput sgr0)$(tput setaf 2)$ADDRESS$(tput sgr0) |$(tput setaf 4)$ISP$(tput sgr0) "
+       echo -en "${numb})" "$(tput bold)$(tput setaf 2)\tIP: $(tput sgr0)$(tput setaf 3)$IPLIST$(tput sgr0) \t"    "$(tput bold)$(tput setaf 2)REQUESTS-MADE:$(tput sgr0)$REQ_LIST \t"    "$(tput bold)$(tput setaf 4)TOR:$(tput setaf 2)TRUE$(tput sgr0) \t" "$(tput bold)$(tput setaf 2)LOCATION$(tput sgr0)|$(tput setaf 4)ISP: $(tput sgr0)$(tput setaf 2)$ADDRESS$(tput sgr0) |$(tput setaf 4)$ISP$(tput sgr0) "
        echo
      else
        echo -en "${numb})" "$(tput bold)$(tput setaf 2)\tIP: $(tput sgr0)$(tput setaf 3)$IPLIST$(tput sgr0) \t"    "$(tput bold)$(tput setaf 2)REQUESTS-MADE:$(tput sgr0)$(tput setaf 3)$REQ_LIST \t"    "$(tput bold)$(tput setaf 4)TOR:$(tput setaf 1)FALSE$(tput sgr0) \t" "$(tput bold)$(tput setaf 2)LOCATION$(tput sgr0)|$(tput setaf 4)ISP: $(tput sgr0)$(tput setaf 2)$ADDRESS$(tput sgr0)|$(tput setaf 4)$ISP$(tput sgr0) "
@@ -45,43 +45,43 @@ read chop
 case $chop in
     1)
    chop1=$(cat iptest.txt | sed -n '1p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     2)
     chop1=$(cat iptest.txt | sed -n '2p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     3)
     chop1=$(cat iptest.txt | sed -n '3p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     4)
     chop1=$(cat iptest.txt | sed -n '4p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     5)
     chop1=$(cat iptest.txt | sed -n '5p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     6)
     chop1=$(cat iptest.txt | sed -n '6p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     7)
     chop1=$(cat iptest.txt | sed -n '7p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     8)
     chop1=$(cat iptest.txt | sed -n '8p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;; 
     9)
     chop1=$(cat iptest.txt | sed -n '9p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     10)
     chop1=$(cat iptest.txt | sed -n '10p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8}' | less -X
+   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
     ;;
     *)
     echo
