@@ -46,7 +46,7 @@ Looks at your **apache log files** and gives you a **nice interface** to view th
 **Code Example**
 
 ```erb
-: ./apachelist.sh
+root@server: ./apachelist.sh
 
 1)      IP: 192.xxx.xxx.xxx       REQUESTS-MADE: 915      TOR:FALSE       LOCATION|ISP: xxxxxxxx xxxx US| xxx
 
