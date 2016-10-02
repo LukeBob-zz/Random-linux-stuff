@@ -50,7 +50,7 @@ Looks at your **apache log files** and gives you a **nice interface** to view th
 
 1)      IP: 192.xxx.xxx.xxx       REQUESTS-MADE: 915      TOR:FALSE       LOCATION|ISP: xxxxxxxx xxxx US|xxx
 
-2)      IP: 141.xxx.xx.xx         REQUESTS-MADE: 1098     TOR:FALSE       LOCATION|ISP: xxx xx xxxx xx| xxxxxx
+2)      IP: 141.xxx.xx.xx         REQUESTS-MADE: 1098     TOR:FALSE       LOCATION|ISP: xxx xx xxxx RU| xxxxxx
 
 3)      IP: 91.xxx.xx.xxx         REQUESTS-MADE: 2328     TOR:FALSE       LOCATION|ISP: xxxx FR | xxx
 
