@@ -75,6 +75,10 @@ root@server:./apachelist.sh
 
 10)     IP: 109.xxx.xx.xx         REQUESTS-MADE: 199824   TOR:FALSE       LOCATION|ISP: xxxxxx CA | xxxxx xx xxx
 
+
+
+99)     Quit!
+
 IP TRAFFIC TO LOOK INTO ?
 
 : 9
