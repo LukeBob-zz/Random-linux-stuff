@@ -7,7 +7,7 @@
 
 set -e
 
-LOG_DIR=/var/log/apache*/All/access*.log  # apache log file
+LOG_DIR=/var/log/apache*/*access*.log  # Any log file
 
 numb=1
 
@@ -32,56 +32,78 @@ for i in {1..10};
        echo
     fi
   let numb=numb+1
-done
+done  
+    echo
+    echo 
+    echo -en   "99)   $(tput setaf 1)$(tput bold) Quit"$(tput sgr0)
+    echo
+    echo
 }
 
-function check_2 {
-echo
-echo  "IP TRAFFIC TO LOOK INTO ?"
-echo
-echo -n ": "
-read chop
 
+function casein {
+echo
+echo -n "IP TRAFFIC TO LOOK INTO?:  "
+read chop
 case $chop in
     1)
    chop1=$(cat iptest.txt | sed -n '1p')
    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    echo
+    echo
+    casein
     ;;
     2)
     chop1=$(cat iptest.txt | sed -n '2p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
     ;;
     3)
     chop1=$(cat iptest.txt | sed -n '3p')
    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
     ;;
     4)
     chop1=$(cat iptest.txt | sed -n '4p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
     ;;
     5)
     chop1=$(cat iptest.txt | sed -n '5p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
     ;;
     6)
     chop1=$(cat iptest.txt | sed -n '6p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
     ;;
     7)
     chop1=$(cat iptest.txt | sed -n '7p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
     ;;
     8)
     chop1=$(cat iptest.txt | sed -n '8p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
     ;; 
     9)
     chop1=$(cat iptest.txt | sed -n '9p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
     ;;
     10)
     chop1=$(cat iptest.txt | sed -n '10p')
-   cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    cat ${LOG_DIR} | fgrep ${chop1} | awk '{print $4,$6,$7,$8,$9}' | less -X
+    casein
+    ;;
+    99)
+    echo
+    echo "Goodbye"
+    sleep 2
+    clear
+    exit 0
     ;;
     *)
     echo
@@ -91,8 +113,6 @@ case $chop in
 esac
 }
 check &&
-check_2
+casein
 rm iptest.txt
 exit
-
-
