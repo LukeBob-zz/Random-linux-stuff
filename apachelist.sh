@@ -19,7 +19,7 @@ if [ ! -f $LOG_DIR ]; then
 fi
 
 
-if [ ! -s LOG_DIR ]; then
+if [ -s LOG_DIR ]; then
     echo '[+]' $LOG_DIR ':  File Is Empty!'
     exit
 fi
