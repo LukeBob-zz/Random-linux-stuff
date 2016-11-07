@@ -3,11 +3,18 @@
 #     Copyright (c) 2016 LukeBob (MIT)                                                          #
 # Shows the top ten ip-addresses sending requests to apache1/2 and their data and location.     #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+# Requires: whois, apache2
+
 #!/bin/bash
 
 set -e
 
-LOG_DIR=/var/log/apache*/access.log  # Any log file
+LOG_DIR=/var/log/apache*/access.log # Any log file
+if [ ! -s LOG_DIR ]; then
+    echo LOG_DIR 'Is Empty.'
+    exit
+fi
 
 numb=1
 
