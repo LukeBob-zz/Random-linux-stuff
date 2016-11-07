@@ -11,10 +11,18 @@
 set -e
 
 LOG_DIR=/var/log/apache*/access.log # Any log file
+
+
+if [ ! -f $LOG_DIR ]; then
+    echo '[+]' $LOG_DIR ':  Cannot Be Found!
+fi
+
+
 if [ ! -s LOG_DIR ]; then
-    echo '[+]' $LOG_DIR ':  File Is Empty.'
+    echo '[+]' $LOG_DIR ':  File Is Empty!'
     exit
 fi
+
 
 numb=1
 
