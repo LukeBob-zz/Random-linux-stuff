@@ -7,7 +7,7 @@
 
 set -e
 
-LOG_DIR=/var/log/apache*/All/access*.log  # Any log file
+LOG_DIR=/var/log/apache*/access.log  # Any log file
 
 numb=1
 
