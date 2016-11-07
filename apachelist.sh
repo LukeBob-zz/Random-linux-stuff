@@ -136,7 +136,7 @@ function casein {
 check &&
 casein
 rm iptest.txt
-if [[ ! -s /tmp/full.tor  ]]; then 
+if [[ -s /tmp/full.tor  ]]; then 
     rm /tmp/full.tor
 fi
 exit
