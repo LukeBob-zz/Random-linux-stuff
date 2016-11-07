@@ -14,7 +14,7 @@ LOG_DIR=/var/log/apache*/access.log # Any log file
 
 
 if [ ! -f $LOG_DIR ]; then
-    echo '[+]' $LOG_DIR ':  Cannot Be Found!
+    echo '[+]' $LOG_DIR ':  Cannot Be Found!'
     exit
 fi
 
