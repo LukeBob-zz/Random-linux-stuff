@@ -12,7 +12,7 @@ set -e
 
 LOG_DIR=/var/log/apache*/access.log # Any log file
 if [ ! -s LOG_DIR ]; then
-    echo LOG_DIR 'Is Empty.'
+    echo $LOG_DIR 'Is Empty.'
     exit
 fi
 
