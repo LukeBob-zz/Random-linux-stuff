@@ -5,7 +5,7 @@
 #!/bin/bash
 
 until [ $# -eq 2 ]; do
-    echo "Usage : ./bobmux.sh start sessionName |  ./bobmux.sh stop sessionName "
+    echo "Usage : ./bobmux.sh start sessionName | ./bobmux.sh stop sessionName "
     exit
 done
 
