@@ -11,8 +11,8 @@
 IPTABLES_TARGET="DROP"
 IPTABLES_CHAINNAME="TOR"
 if ! iptables -L TOR -n >/dev/null 2>&1 ; then
-   iptables -N TOR >/dev/null 2>&1
-   iptables -A INPUT -p tcp -j TOR 2>&1
+    iptables -N TOR >/dev/null 2>&1
+    iptables -A INPUT -p tcp -j TOR 2>&1
 fi
 cd /tmp/
 echo -e "\n\tGetting Tor node list from dan.me.uk\n"
