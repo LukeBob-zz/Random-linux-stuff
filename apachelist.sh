@@ -38,7 +38,7 @@ function check {
         wget -q -O - https://www.dan.me.uk/torlist/ -U SXTorBlocker/1.0 > /tmp/full.tor 
     fi
 
-    for i in {1..10};
+    for i in iptest.txt;
         do
         IPLIST=$(cat iptest.txt | sed -n ${numb}p)
         REQ_LIST=$( cat ${LOG_DIR} | awk '{print $1}' | sort | uniq -c | sort -n | tail | sed 's/\s\+/ /' | cut -f 1-2 -d ' ' | sed -n ${numb}p)
