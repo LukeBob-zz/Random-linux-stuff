@@ -46,9 +46,8 @@ root@server:
 ```
 ##apachelist.sh
 
-Looks at your **apache log files** and gives you a **nice interface** to view the logs. You will need to download **full.tor** and put it in the **/temp dir** like so, to use this script.
+Looks at your **apache log files** and gives you a **nice interface** to view the logs. 
 
- * ```wget -q -O - https://www.dan.me.uk/torlist/ -U SXTorBlocker/1.0 > /tmp/full.tor```
 
 **Code Example**
 
