@@ -10,7 +10,7 @@
 
 set -e
 
-LOG_DIR=/var/log/apache*/access.log # Any log file
+LOG_DIR=/var/log/apache*/access.log # Any Apache|Apache2 access log file
 
 
 if [ ! -f $LOG_DIR ]; then
