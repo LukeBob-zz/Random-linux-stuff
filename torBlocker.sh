@@ -16,7 +16,7 @@ if ! iptables -L TOR -n >/dev/null 2>&1 ; then
 fi
 cd /tmp/
 echo -e "\n\tGetting Tor node list from dan.me.uk\n"
-wget -q -O - https://www.dan.me.uk/torlist/ -U SXTorBlocker/1.0 > /tmp/full.tor
+wget -q -O - https://www.dan.me.uk/torlist/?exit > /tmp/full.tor
 iptables -F TOR
 CMD=$(cat /tmp/full.tor | uniq | sort)
 for IP in $CMD; do
