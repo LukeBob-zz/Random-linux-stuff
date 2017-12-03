@@ -35,7 +35,7 @@ function check {
     if [ -f /tmp/full.tor ]; then
         sleep 1
     else
-        wget -q -O - https://www.dan.me.uk/torlist/ -U SXTorBlocker/1.0 > /tmp/full.tor 
+        wget -q -O - https://www.dan.me.uk/torlist/?exit > /tmp/full.tor 
     fi
 
     while read p;
